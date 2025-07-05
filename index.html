@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+    <title>Home - DarkBin</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/legacy/index.css">
+    <link rel="stylesheet" href="static/files/dropdown.html">
+    <link rel="stylesheet" href="static/files/bootstrap.min.html">
+    <link rel="stylesheet" href="static/files/doxbin.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+    <style>
+    body, p {
+        background-color: #060606;
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+
+    tr.special-role-row-black td, tr.special-role-row-black th {
+        background-color: #080808;
+        color: #fff;
+    }
+    tr.special-role-row-grey td, tr.special-role-row-grey th {
+        background-color: #181818;
+        color: #fff;
+    }
+
+    tr.status-root    > td, tr.status-root    > th { background-color: #222 !important; }
+    tr.status-admin   > td, tr.status-admin   > th { background-color: #3D0606 !important; }
+    tr.status-manager > td, tr.status-manager > th { background-color: #1A0D2B !important; }
+    tr.status-mod     > td, tr.status-mod     > th { background-color: #0F2D06 !important; }
+    tr.status-council > td, tr.status-council > th { background-color: #1A3D5D !important; }
+    tr.status-helper  > td, tr.status-helper  > th { background-color: #0A0A33 !important; }
+    tr.status-clique  > td, tr.status-clique  > th { background-color: #031C34 !important; }
+    tr.status-rich    > td, tr.status-rich    > th { background-color: #2B200D !important; }
+    tr.status-criminal> td, tr.status-criminal> th { background-color: #2B021B !important; }
+    tr.status-vip     > td, tr.status-vip     > th { background-color: #2D0A21 !important; }
+    tr.status-user    > td, tr.status-user    > th { background-color: #181818 !important; }
+
+    .table-pin tbody>tr:nth-child(2n+1)>td,
+    .table-pin tbody>tr:nth-child(2n+1)>th {
+        background-color: #080808;
+    }
+
+    .table-pin tbody>tr:nth-child(2n)>td,
+    .table-pin tbody>tr:nth-child(2n)>th {
+        background-color: #181818;
+    }
+
+    .table td[colspan] {
+        text-align: left;
+        padding-left: 15px;
+    }
+
+    .table .comments-col { width: 10%; text-align: center; }
+    .table .views-col { width: 10%; text-align: center; }
+    .table .created-by-col { width: 15%; text-align: center; }
+    .table .added-col { width: 15%; text-align: center; }
+
+    .created-by-col a, .created-by-col a:hover {
+        text-decoration: none !important;
+    }
+    </style>
+
+<body>
+
+    <div class="col-md-12">
+        <div class="col-md-12" style="margin-top: 60px;float:none;">
+            <div align="center">
+                    <img src="static/files/logo.png" alt="Logo">
+                <h5 class="announcement a-1" style="color:#2AABEE;"><u><a style="color:inherit;" href="https://t.me/DarkBin_news">Official DarkBin Telegram</a></u></h5>
+                <h5 class="announcement a-2" style="color:#CC0000;">Main Web: skidslol.vercel.app/</a></h5>
+            </div>
+        </div>
+
+        <div class="col-md-7" style="float:none;margin:auto;padding:0;">
+            <h6 style="margin-top: 14px;">Pinned Pastes</h6>
+            <table class="table table-pin table-hover">
+                <thead>
+                    <tr style="background-color: #181818;">
+                        <th colspan="3">Title</th>
+                        <th class="clickable auto-size comments-col" id="commentsorder">Comments</th>
+                        <th class="clickable r-hide views-col" id="dateorder">Views</th>
+                        <th class="clickable auto-size created-by-col" id="commentsorder">Created by</th>
+                        <th class="clickable auto-size added-col" id="viewsorder">Added</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr class="doxentry status-admin special-role-row-grey">
+                        <td colspan="3" style="overflow: hidden;text-overflow: ellipsis;">
+                            <a title="How to Ensure Your Paste Stays Up" href="post/How-to-Ensure-Your-Paste-Stays-Up.html">
+                                How to Ensure Your Paste Stays Up
+                            </a>
+                        </td>
+                        <td class="r-hide comments-col">0</td>
+                        <td class="r-hide views-col">28</td>
+                        <td class="created-by-col">
+                            
+                                
+                                <a class="dox-username" href="user/Admin.html" target="_self" style="color: #FFFFFF; font-weight: bold; background-image: url('static/files/red.gif');">
+                                    <span>Admin</span> <span style="color: #ff0000;">[Admin]</span>
+                                </a>
+                            
+                        </td>
+                        <td class="added-col">12 hours ago</td>
+                    </tr>
+                    
+                    <tr class="doxentry status-admin special-role-row-black">
+                        <td colspan="3" style="overflow: hidden;text-overflow: ellipsis;">
+                            <a title="Transparency Report" href="post/Transparency-Report.html">
+                                Transparency Report
+                            </a>
+                        </td>
+                        <td class="r-hide comments-col">0</td>
+                        <td class="r-hide views-col">6</td>
+                        <td class="created-by-col">
+                            
+                                
+                                <a class="dox-username" href="user/Admin.html" target="_self" style="color: #FFFFFF; font-weight: bold; background-image: url('static/files/red.gif');">
+                                    <span>Admin</span> <span style="color: #ff0000;">[Admin]</span>
+                                </a>
+                            
+                        </td>
+                        <td class="added-col">2 hours ago</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        
+            <!-- <h6 style="margin-top: 14px; color: white;">Pastes</h6> -->
+            <table class="table table-striped table-hover" style="margin-top: 0px;">
+                <thead>
+                    <tr style="background-color: #181818;">
+                        <th colspan="3">Title</th>
+                        <th class="clickable auto-size comments-col" id="commentsorder">Comments</th>
+                        <th class="clickable r-hide views-col" id="dateorder">Views</th>
+                        <th class="clickable auto-size created-by-col" id="commentsorder">Created by</th>
+                        <th class="clickable auto-size added-col" id="viewsorder">Added</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr class="doxentry status-council special-role-row-grey">
+                        <td colspan="3" style="overflow: hidden;text-overflow: ellipsis;">
+                            <a title="Ryan Beary" href="post/RyanBeary.html">
+                                Ryan Beary
+                            </a>
+                        </td>
+                        <td class="r-hide comments-col">1</td>
+                        <td class="r-hide views-col">15</td>
+                        <td class="created-by-col">
+                            
+                                
+                                <a class="dox-username" href="user/ig8.html" target="_self" style="color: #FF69B4; font-weight: bold;">
+                                    <span>LKLLC</span> <span style="color: #87cefa;">[Developer]</span>
+                                </a>
+                            
+                        </td>                        
+                        <td class="added-col">3 hours ago</td>
+                    </tr>
+                    
+                    <tr class="doxentry status-mod special-role-row-black">
+                        <td colspan="3" style="overflow: hidden;text-overflow: ellipsis;">
+                            <a title="Pedophile 0x01" href="post/Pedophile.html">
+                                Pedophile 0x01
+                            </a>
+                        </td>
+                        <td class="r-hide comments-col">0</td>
+                        <td class="r-hide views-col">250</td>
+                        <td class="created-by-LKLLC">
+                            
+                                
+                                <a class="dox-username" href="user/LKLLC.html" target="_self" style="color: #FFFFFF; font-weight: bold;">
+                                    <span>CXD</span> <span style="color: #D914FF;">[Council]</span>
+                                </a>
+                            
+                        </td>                        
+                        <td class="added-col">45 minutes ago</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>                 
+    </div>
+
+    <div class="clickable text-center auto-size">
+        <br>
+            <a href="#">Back to top</a>
+        </br>
+    </div>
+
+</body>
+
+
+</html>
+
+
+<style>
+@keyframes green-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(0, 255, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 255, 0, 0);
+  }
+}
+.user-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-weight: bold;
+  background-repeat: repeat;
+  background-size: cover;
+  color: #fff;
+}
+.admin-badge {
+  background-image: url('static/files/red.gif');
+}
+.manager-badge {
+  background-image: url('static/files/purple.gif');
+}
+.rich-badge {
+  background-image: url('static/files/gold.gif');
+}
+</style>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                aria-expanded="false" aria-controls="navbar">
+                Please log in from your computer
+            </button>
+            <a style="color: rgb(255, 255, 255);" class="navbar-brand" href="index.html">
+                DarkBin 
+            </a>
+        </div>
+
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul style="color: white;" class="nav navbar-nav">
+                <li class="">
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="new.html">
+                        Add Paste
+                    </a>
+                </li>
+                <li>
+                    <a href="users.html">
+                        Users
+                    </a>
+                </li>
+                <li>
+                    <a href="upgrades.html">
+                        Upgrades
+                    </a>
+                </li>
+                <li>
+                    <a href="hoa.html">
+                        Hall of Autism
+                    </a>
+                </li>
+                <li>
+                    <a href="tos.html">
+                        TOS
+                    </a>
+                </li>
+                <li>
+                    <a href="https://t.me/DarkBin_news">
+                        Telegram
+                    </a>
+                </li>
+                
+            </ul>
+            <div class="sidebar-right">
+                <ul class="nav navbar-nav">
+                    
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="register.html">Register</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+function updateOnlineCount() {
+    fetch('/online_count')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('online-count-number').textContent = data.online_count;
+        });
+}
+
+
+updateOnlineCount();
+
+setInterval(updateOnlineCount, 30000);
+</script>
+
+

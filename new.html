@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>New Paste - DarkBin</title>
+
+    <link rel="stylesheet" href="static/legacy/app.css">
+    <link rel="stylesheet" href="static/files/doxbin.css">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="../www.google.com/recaptcha/api.js" async defer></script>
+
+    <style>
+        .sidebar {
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 300px;
+            height: 100%;
+            background-color: #2c3e50;
+            transition: transform 0.3s ease;
+            transform: translateX(0);
+        }
+
+        .sidebar.hidden {
+            transform: translateX(100%);
+        }
+
+        .show-sidebar {
+            position: fixed;
+            top: 10px;
+            right: 300px;
+            z-index: 1000;
+            cursor: pointer;
+            transition: right 0.3s ease;
+            background-color: #2c3e50;
+            padding: 10px;
+        }
+
+        .show-sidebar.hidden {
+            right: 0px;
+        }
+    </style>
+</head>
+
+<body class="bin">
+    
+    <div class="wrapper">
+        <div class="table">
+
+            <a class="show-sidebar" onclick="showHideSideBar()"><i class="fa fa-arrow-right"></i></a>
+            
+            <form action="https://DarkBin.com/new_paste" id="paste-form" method="POST" class="editor-form">
+                <input type="hidden" name="csrf_token" value="IjQ3MzYwZWUyNTE4ZjkzMWY1ODE0NmUzZDRlNjY2N2M2NzM4MGI5YmQi.aGgBwQ.sBymWvC4EgpEdsmIEqNop9u7Law">
+                <div id="showhide-sidebar" class="sidebar">
+                    <a class="sidebar-logo" href="index.html">
+                        <pre style="font-size: 10px;">
+    ██████╗  █████╗ ██████╗ ██████╗ ██╗███╗   ██╗
+    ██╔══██╗██╔══██╗██╔══██╗██╔══██╗██║████╗  ██║
+    ██████╔╝███████║██████╔╝██████╔╝██║██╔██╗ ██║
+    ██╔══██╗██╔══██║██╔══██╗██╔══██╗██║██║╚██╗██║
+    ██║  ██║██║  ██║██║  ██║██████╔╝██║██║ ╚████║
+    ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚═╝╚═╝  ╚═══╝
+                        </pre>
+                    </a>
+
+                    <div class="options">
+                        
+                            <span style="text-align: center;">
+                                <a style="color: #2a9fd6;" target="_blank" href="register.html">Create an account</a> to manage your pastes
+                            </span>
+                        
+                        <p style="color:red; text-align: center; font-size:15px;">
+                            <a href="tos.html" style="color:red;">READ TOS BEFORE POSTING!</a>
+                            <br>
+                            Any post that violates our TOS will be removed.
+                        </p>
+
+                        <h3 style="text-align: center;">Title:</h3>
+                        
+                         
+                        
+                        <input type="text" name="pasteTitle" id="paste-title" maxlength="70" value="" placeholder="Paste title (no special chars like | * ? < > : &quot; / \)">
+                        <p style="font-size: 12px; color: #888; text-align: center; margin: 5px 0;">
+                            Note: Invalid characters (| * ? < > : " / \) will be replaced with underscores
+                        </p>
+                    </div>
+
+                    <div class="options">
+                        <div class="g-recaptcha" data-theme="dark" data-sitekey="6LfkGncrAAAAACAFCgbfJzEZQt8XIr69KTXWSIVp"></div>
+                    </div>        
+
+                    <div class="options">
+                        <ul>
+                            <li>
+                                <input type="submit" id="create-paste" value="Create" class="button">
+                            </li>
+                            <li>
+                                <input type="reset" value="Clear" class="button">
+                            </li>
+                        </ul>
+                    </div>
+
+                    <p>
+                        Please note that all posted information is publicly available and must follow our
+                        <a href="tos.html" style="text-decoration: underline;">
+                            TOS.
+                        </a>
+                    </p>
+                </div>
+
+                <div class="editor-container">
+                    <textarea name="pasteContent" id="paste-content" class="editor mousetrap" wrap="off" placeholder="READ OUR TERMS OF SERVICE BEFORE CREATING A POST. Pastes that break TOS will be removed. https://DarkBin.net/tos&#13;READ OUR TERMS OF SERVICE BEFORE CREATING A POST. Pastes that break TOS will be removed. https://DarkBin.net/tos&#13;READ OUR TERMS OF SERVICE BEFORE CREATING A POST. Pastes that break TOS will be removed. https://DarkBin.net/tos"></textarea>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+    <script>
+        function showHideSideBar() {
+            var sidebar = document.getElementById("showhide-sidebar");
+            var arrow = document.querySelector(".show-sidebar i");
+            var sidebarButton = document.querySelector(".show-sidebar");
+
+            if (sidebar.classList.contains("hidden")) {
+                sidebar.classList.remove("hidden");
+                sidebarButton.classList.remove("hidden");
+                sidebarButton.style.right = "300px";
+                arrow.classList.remove("fa-arrow-left");
+                arrow.classList.add("fa-arrow-right");
+            } else {
+                sidebar.classList.add("hidden");
+                sidebarButton.classList.add("hidden");
+                sidebarButton.style.right = "0px";
+                arrow.classList.remove("fa-arrow-right");
+                arrow.classList.add("fa-arrow-left");
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var sidebar = document.getElementById("showhide-sidebar");
+            var sidebarButton = document.querySelector(".show-sidebar");
+            var arrow = document.querySelector(".show-sidebar i");
+
+            sidebar.classList.remove("hidden");
+            sidebarButton.classList.remove("hidden");
+            sidebarButton.style.right = "300px";
+            arrow.classList.remove("fa-arrow-left");
+            arrow.classList.add("fa-arrow-right");
+        });
+    </script>
+
+</body>
+
+<!-- Mirrored from DarkBin.com/new by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Jul 2025 22:31:10 GMT -->
+</html>

@@ -1,0 +1,689 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users - DarkBin</title>
+    <link rel="stylesheet" href="static/legacy/index.css">
+    <link rel="stylesheet" href="static/legacy/dropdown.css">
+    <link rel="stylesheet" href="static/files/doxbin.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        html {
+            overflow-x: hidden;
+        }
+        input[type=text],
+        select,
+        option {
+            line-height: 1.2;
+            color: white;
+            background: #282828;
+            border: 0;
+            border-radius: 2px;
+            display: inline-block;
+            -webkit-font-smoothing: antialiased;
+            outline: none;
+            padding: 7px 5px;
+            width: 200px;
+        }
+        input[type=text]::placeholder {
+            color: rgb(167, 167, 167);
+        }
+        input[type=submit] {
+            line-height: 1.2;
+            color: white;
+            background: #282828;
+            border: 0;
+            border-radius: 2px;
+            display: inline-block;
+            -webkit-font-smoothing: antialiased;
+            outline: none;
+            padding: 7px 5px;
+        }
+        input,
+        select,
+        option {
+            font-size: 100%;
+        }
+        input[type=submit]:hover {
+            color: white;
+            text-decoration: none;
+        }
+        .center {
+            text-align: center;
+        }
+        .admin-text {
+            color: red;
+            font-weight: bold;
+        }
+        .doxbin-text {
+            text-align: center;
+            background-color: inherit;
+            line-height: 15px;
+            border: none;
+            color: rgb(255, 0, 0);
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+        .hoa-title {
+            margin: 5px 0 0 0;
+            letter-spacing: 2px;
+        }
+        .hoa-container {
+            border: solid 1px rgb(40, 40, 40);
+            background-color: rgb(14, 14, 14);
+            width: 32%;
+            border-radius: 2px;
+            float: left;
+            margin: 10px 5px 10px 5px;
+            position: relative;
+            padding: 15px;
+            -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+            height: 460px;
+        }
+        .hoa-container:hover {
+            border: solid 1px rgb(44, 44, 44);
+            background-color: rgb(18, 18, 18);
+        }
+        .hoa-container .hoa-image {
+            text-align: center;
+            max-height: 215px;
+            border-bottom: solid 1px rgb(40, 40, 40);
+        }
+        .hoa-container .hoa-image img {
+            width: 100%;
+            height: 200px;
+            max-width: 200px;
+            max-height: 200px;
+            margin-bottom: 15px;
+        }
+        .hoa-container .hoa-name {
+            padding-top: 10px;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .hoa-container .hoa-description {
+            margin-top: 5px;
+            text-align: center;
+            color: rgb(200, 200, 200);
+            word-wrap: break-word;
+            overflow-y: auto;
+            height: 160px;
+        }
+        @media only screen and (max-width: 991px) {
+            .hoa-container {
+                width: 48%;
+            }
+        }
+        @media only screen and (max-width: 575px) {
+            .hoa-container {
+                width: 100%;
+            }
+        }
+        @media only screen and (max-width: 271px) {
+            .doxbin-text {
+                font-size: 9px;
+                line-height: 10px;
+            }
+            .hoa-title {
+                font-size: 16px;
+                letter-spacing: 2px;
+            }
+        }
+        ::-webkit-scrollbar {
+            width: 7px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #cacaca;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgb(110, 110, 110);
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgb(68, 68, 68);
+        }
+        .rainbow {
+            text-shadow: 2px 2px 4px #000000;
+            -webkit-animation: rainbow 5s infinite;
+            -ms-animation: rainbow 5s infinite;
+            animation: rainbow 5s infinite;
+        }
+        @-webkit-keyframes rainbow {
+            0% { color: red; }
+            17% { color: orange; }
+            33% { color: yellow; }
+            50% { color: green; }
+            67% { color: blue; }
+            84% { color: purple; }
+            100% { color: red; }
+        }
+        @-ms-keyframes rainbow {
+            0% { color: red; }
+            17% { color: orange; }
+            33% { color: yellow; }
+            50% { color: green; }
+            67% { color: blue; }
+            84% { color: purple; }
+            100% { color: red; }
+        }
+        @keyframes rainbow {
+            0% { color: red; }
+            17% { color: orange; }
+            33% { color: yellow; }
+            50% { color: green; }
+            67% { color: blue; }
+            84% { color: purple; }
+            100% { color: red; }
+        }
+        .search-container {
+            text-align: center;
+            margin: 10px 0 0 0;
+        }
+        .search-form {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+        }
+        .search-box {
+            background: #282828;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 5px 10px;
+            width: 240px;
+            height: 32px;
+            box-sizing: border-box;
+        }
+        .search-box::placeholder {
+            color: #878787;
+        }
+        .search-box:focus {
+            outline: none;
+        }
+        .search-button {
+            background: #282828;
+            color: white;
+            border: none;
+            padding: 5px 15px;
+            cursor: pointer;
+            height: 32px;
+            box-sizing: border-box;
+            font-size: 13px;
+        }
+        .search-button:hover {
+            color: white;
+            text-decoration: none;
+        }
+        .table th.id-col { width: 10%; }
+        .table th.username-col { width: 60%; }
+        .table th.joined-col { width: 30%; }
+        .table th:nth-child(2),
+        .table td:nth-child(2) {
+            text-align: left;
+            padding-left: 15px;
+        }
+        h6 {
+            text-align: left;
+            margin: 20px 0 5px 5px;
+        }
+        .table td[colspan] {
+            text-align: left;
+            padding-left: 15px;
+        }
+        h1 {
+            text-align: center;
+        }
+        p {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th {
+            border-bottom: 1px solid #444;
+        }
+        th, td {
+            padding: 5px;
+            text-align: center;
+            border: 0;
+        }
+        .red {
+            color: rgb(167, 22, 22);
+        }
+        .purple {
+            color: rgb(29, 112, 26);
+        }
+        .Founder {
+            color:darkorange;
+        }
+        .green {
+            color: #189162;
+        }
+        .pink {
+            color: #5c265c;
+        }
+        .blue {
+            color: rgb(30, 104, 165);
+        }
+    </style>
+
+    
+
+</head>
+
+<body>
+    
+
+<style>
+@keyframes green-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(0, 255, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 255, 0, 0);
+  }
+}
+.user-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-weight: bold;
+  background-repeat: repeat;
+  background-size: cover;
+  color: #fff;
+}
+.admin-badge {
+  background-image: url('static/files/red.gif');
+}
+.manager-badge {
+  background-image: url('static/files/purple.gif');
+}
+.rich-badge {
+  background-image: url('static/files/gold.gif');
+}
+</style>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                aria-expanded="false" aria-controls="navbar">
+                Please log in from your computer
+            </button>
+            <a style="color: rgb(255, 255, 255);" class="navbar-brand" href="index.html">
+                DarkBin 
+            </a>
+        </div>
+
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul style="color: white;" class="nav navbar-nav">
+                <li class="">
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="new.html">
+                        Add Paste
+                    </a>
+                </li>
+                <li>
+                    <a href="users.html">
+                        Users
+                    </a>
+                </li>
+                <li>
+                    <a href="upgrades.html">
+                        Upgrades
+                    </a>
+                </li>
+                <li>
+                    <a href="hoa.html">
+                        Hall of Autism
+                    </a>
+                </li>
+                <li>
+                    <a href="tos.html">
+                        TOS
+                    </a>
+                </li>
+                <li>
+                    <a href="https://t.me/DarkBin_news">
+                        Telegram
+                    </a>
+                </li>
+                
+            </ul>
+            <div class="sidebar-right">
+                <ul class="nav navbar-nav">
+                    
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="register.html">Register</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+function updateOnlineCount() {
+    fetch('/online_count')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('online-count-number').textContent = data.online_count;
+        });
+}
+
+// Update immediately when page loads
+updateOnlineCount();
+
+// Then update every 30 seconds to match server-side caching
+setInterval(updateOnlineCount, 30000);
+</script>
+
+
+    <div class="col-md-12" style="margin-top: 60px;">
+        <div class="center"><br>
+        <h4>Users</h4>
+        <div class="search-container">
+            <div id="error-msg" class="error-message"></div>
+            <form id="search-form" class="search-form" method="GET" action="https://darb-b1n.vercel.app/users">
+                <input id="search-query" name="search_query" type="text" class="search-box" placeholder="Username..." maxlength="20" value="">
+                <button type="submit" class="search-button">Search</button>
+            </form><br>
+        </div>
+        
+
+        
+        <div class="container">
+            
+            <h6>Admin</h6>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th class="text-center id-col">ID</th>
+                        <th class="username-col">Username</th>
+                        <th class="text-center joined-col">Joined</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        <tr>
+                            <td class="text-center">2</td>
+                            <td><a class="dox-username" href="user/Admin.html" target="_blank" style="color: #FFFFFF; font-weight: bold; background-image: url('static/files/red.gif');" >Admin</a></td>
+                            <td class="text-center">13 hours ago</td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+            
+
+            
+            <h6>Manager</h6>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th class="text-center id-col">ID</th>
+                        <th class="username-col">Username</th>
+                        <th class="text-center joined-col">Joined</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        <tr>
+                            <td colspan="3">No users found in this rank.</td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+            
+
+            
+            <h6>DarkBin Mod</h6>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th class="text-center id-col">ID</th>
+                        <th class="username-col">Username</th>
+                        <th class="text-center joined-col">Joined</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        <tr>
+                            <td class="text-center">ID</td>
+                            <td><a class="dox-username" href="user/LKLLC.html" target="_blank" style="color: #FFFFFF; font-weight: bold;" >LKLLC</a></td>
+                            <td class="text-center">an hour ago</td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+            
+
+            
+            <h6>DarkBin Council</h6>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th class="text-center id-col">ID</th>
+                        <th class="username-col">Username</th>
+                        <th class="text-center joined-col">Joined</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        <tr>
+                            <td class="text-center">ID</td>
+                            <td><a class="dox-username" href="user/CXD.html" target="_blank" style="color: #FFFFFF; font-weight: bold;" >CXD</a></td>
+                            <td class="text-center">17 hours ago</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="text-center">ID</td>
+                            <td><a class="dox-username" href="user/dead.html" target="_blank" style="color: #FF69B4; font-weight: bold;" >Dead</a></td>
+                            <td class="text-center">7 hours ago</td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+            
+
+            
+            <h6>Helper</h6>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th class="text-center id-col">ID</th>
+                        <th class="username-col">Username</th>
+                        <th class="text-center joined-col">Joined</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        <tr>
+                            <td class="text-center">4</td>
+                            <td><a class="dox-username" href="user/proxy.html" target="_blank" style="color: #5555FF; font-weight: bold;" >proxy</a></td>
+                            <td class="text-center">11 hours ago</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="text-center">6</td>
+                            <td><a class="dox-username" href="user/Stuxnet.html" target="_blank" style="color: #5555FF; font-weight: bold;" >Stuxnet</a></td>
+                            <td class="text-center">9 hours ago</td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+            
+
+            
+            <h6>Founder</h6>
+            <table class="table table-striped">
+                <thead>
+                    <tr class="doxentry">
+                        <th class="text-center id-col">ID</th>
+                        <th class="username-col">Username</th>
+                        <th class="text-center joined-col">Joined</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr class="doxentry">
+                        <td class="text-center">1</td>
+                        <td><a class="dox-username" href="user/Holo.html" target="_blank" style="color: #BB1E64; font-weight: bold;" >Holo</a></td>
+                        <td class="text-center">13 hours ago</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            
+
+            
+            <h6>Clique</h6>
+            <table class="table table-striped">
+                <thead>
+                    <tr class="doxentry">
+                        <th class="text-center id-col">ID</th>
+                        <th class="username-col">Username</th>
+                        <th class="text-center joined-col">Joined</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        <tr>
+                            <td colspan="3">No users found in this rank.</td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+            
+
+            
+            <h6>Rich</h6>
+            <table class="table table-striped">
+                <thead>
+                    <tr class="doxentry">
+                        <th class="text-center id-col">ID</th>
+                        <th class="username-col">Username</th>
+                        <th class="text-center joined-col">Joined</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr class="doxentry">
+                        <td class="text-center">11</td>
+                        <td><a class="dox-username" href="user/Sen.html" target="_blank" style="color: #C5C6D3; font-weight: bold; background-image: url('static/files/gold.gif');" >Sen</a></td>
+                        <td class="text-center">4 hours ago</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            
+
+            
+            <h6>Criminal</h6>
+            <table class="table table-striped">
+                <thead>
+                    <tr class="doxentry">
+                        <th class="text-center id-col">ID</th>
+                        <th class="username-col">Username</th>
+                        <th class="text-center joined-col">Joined</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr class="doxentry">
+                        <td class="text-center">12</td>
+                        <td><a class="dox-username" href="user/GTA.html" target="_blank" style="color: #780A48; font-weight: bold;" >Funded LK12</a></td>
+                        <td class="text-center">4 hours ago</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            
+
+            
+            <h6>VIP</h6>
+            <table class="table table-striped">
+                <thead>
+                    <tr class="doxentry">
+                        <th class="text-center id-col">ID</th>
+                        <th class="username-col">Username</th>
+                        <th class="text-center joined-col">Joined</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        <tr>
+                            <td colspan="3">No users found in this rank.</td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+            
+
+            
+            <h6>Users</h6>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th class="text-center id-col">ID</th>
+                        <th class="username-col">Username</th>
+                        <th class="text-center joined-col">Joined</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        <tr>
+                            <td class="text-center">7</td>
+                            <td><a class="dox-username" href="user/DarkBinisbe.html" target="_blank" style="color: #2a9fd6; font-weight: bold;" >DarkBinisbe</a></td>
+                            <td class="text-center">11 hours ago</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="text-center">8</td>
+                            <td><a class="dox-username" href="user/Vourn.html" target="_blank" style="color: #2a9fd6; font-weight: bold;" >Vourn</a></td>
+                            <td class="text-center">an hour ago</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="text-center">9</td>
+                            <td><a class="dox-username" href="user/KR.html" target="_blank" style="color: #2a9fd6; font-weight: bold;" >KR</a></td>
+                            <td class="text-center">2 hours ago</td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+            
+        </div>
+        
+    </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Remove the restrictive input filtering that was preventing search functionality
+        // Users should be able to search with any characters
+    });
+</script>
+</body>
+
+
+<!-- Mirrored from DarkBin.com/users by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Jul 2025 22:31:14 GMT -->
+</html>

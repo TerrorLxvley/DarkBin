@@ -1,0 +1,611 @@
+
+<!DOCTYPE html>
+<html lang="en" style="min-height: 100%;">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>DarkBin</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DarkBin</title>
+    <link rel="stylesheet" href="../static/legacy/index.css">
+    <link rel="stylesheet" href="../static/files/dropdown.html">
+    <link rel="stylesheet" href="../static/files/bootstrap.min.html">
+    <link rel="stylesheet" href="../static/files/doxbin.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../www.google.com/recaptcha/api.js" async defer></script>
+</head>
+    <title>DarkBin</title>
+    <style>
+    .info-cont{
+        margin: 4px 0 15px 0;
+        font-size: 13px;
+        padding-bottom: 5px;
+    }
+    .info-cont p{
+        margin: 0;
+        line-height: 16px;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        color: white;
+    }
+    .info-cont p b{
+        margin-right: 6px;
+    }
+    .admin-text{
+        color: red;
+        font-weight: bold;
+    }
+    .profile-cont{
+        margin-top: 60px;
+        padding-top: 1px;
+    }
+    .gray{
+        color: #bfbfbf;
+        margin-top: 5px;
+    }
+    .admin-text{
+        color: red;
+        font-weight: bold;
+    }
+    .profile-img{
+        float: left;
+        width: 120px;
+        height: 120px;
+        margin-right: 10px;
+        -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.75);
+        border-radius: 2px;
+    }
+    .button{
+        line-height: 1.2;
+        color: white;
+        background: #232323;
+        border: 1px solid #444;
+        border-radius: 2px;
+        display: inline-block;
+        -webkit-font-smoothing: antialiased;
+        outline: none;
+        padding: 5px 5px 3px 5px;
+        vertical-align: top;
+        margin-top: 8px;
+    }
+    .button:hover{
+        text-decoration: none;
+        color: white;
+		background: #2E2E2E;
+    }
+    .edit-button {
+        background-color: #282828;
+        border: 1px solid #444;
+        padding: 5px 10px;
+        margin-top: 0px;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        font-weight: normal;
+        -webkit-font-smoothing: auto;
+        text-transform: none;
+    }
+
+    .edit-button:hover {
+        background-color: #383838;
+    }
+
+    .follow-button{
+        display: inline-block;
+        padding: 5px 8px;
+        border: solid 1px #00ff00;
+        background-color: #272727;
+        color: white;
+        border-radius: 2px;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: bold;
+        
+        margin-top: 42px;
+        float: right;
+    }
+
+    .follow-button:hover{
+        text-decoration: none;
+        color: white;
+        background-color: #1D1D1D;
+    }
+
+    .follow-button:focus{
+        color: white;
+        text-decoration: none;
+    }
+
+    .admin-dropdown-btn{
+        color: white;
+        font-size: 25px;
+        right: 0;
+        position: absolute;
+    }
+    div.uinfo{
+        margin-bottom:20px;
+    }
+    .uinfo .uinfo-row{
+        text-align: right;
+        color: #bfbfbf;
+        padding: 4px;
+        font-size: 13px;
+        border-bottom: 1px solid #282828;
+    }
+    .uinfo .uinfo-h{
+        text-align: left;
+        font-weight: bold;
+        float:left;
+    }
+    .uinfo .uinfo-i{
+        
+    }
+    div.pastes{
+        margin-left: 0px;
+        padding-right: 15px;
+    }
+    
+    div.profile-padding{
+        padding: 10px 15px 0 15px;
+        position:relative;
+    }
+
+    .edituser{
+        margin-top: 0px;
+        right:15px;
+        position:absolute;
+    }
+    .profile-comments{
+        width: 100%;
+    }
+    .profile-comment-create{
+        background-color: #1c1c1c;
+        border: solid 1px #282828;
+        border-radius: 3px;
+        padding: 3px;
+        width: 100%;
+    }
+    .profile-comment-create:focus{
+        outline:none;
+    }
+    .profile-comments .profile-comment{
+        text-align: right;
+        color: #bfbfbf;
+        padding: 4px;
+        font-size: 13px;
+        border-bottom: 1px solid #282828;
+    }
+    .profile-comments .profile-comment-username{
+        text-align: left;
+        font-weight: bold;
+        float:left;
+    }
+    .profile-comment:last-of-type{
+        border-bottom: none;
+    }
+    .pastes-section{
+        width: 70%;
+    }
+    .info-section{
+        width: 30%;
+    }
+    .profile-split{
+        display: flex
+    }
+
+    @media  only screen and (max-width: 992px){
+        div.rcta{
+            border-left: none;
+            padding-top: 10px;
+            padding: 0;
+            float: none;
+        }
+        div.uinfo{
+            border-right: none;
+            padding-top: 10px;
+            padding: 0;
+        }
+        div.pastes{
+            padding: 0;
+            border: none;
+        }
+        .edituser{
+            right: 0;
+        }
+        div.profile-padding{
+            padding: 0;
+        }
+        div.pastes-section{
+            width:100%;
+        }
+        div.info-section{
+            width:100%;
+        }
+        .profile-split{
+            display: block;
+        }
+    }
+
+    .delete-comments-button{
+        display: inline-block;
+        padding: 2px 5px;
+        background-color: rgb(80, 12, 12);
+        border: solid 1px rgb(114, 58, 58);
+        border-radius: 2px;
+        color: white;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+    .delete-comments-button.delete-smaller{
+        padding: 0;
+        margin-left:7px;
+        display:none;
+        border:none;
+        background:none;
+        color:red;
+        vertical-align: top;
+    }
+    .delete-comments-button:hover{
+        color: white;
+        background-color: rgb(61, 13, 13);
+    }
+    .delete-comments-button:focus{
+        color: white;
+    }
+    .delete-comments-button i{
+        font-size: 15px;
+        vertical-align: text-top;
+    }
+
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    /* Status-based row backgrounds (more specific, override table striping) */
+    tr.status-root    > td, tr.status-root    > th { background-color: #222 !important; }
+    tr.status-admin   > td, tr.status-admin   > th { background-color: #3D0606 !important; }
+    tr.status-manager > td, tr.status-manager > th { background-color: #1A0D2B !important; }
+    tr.status-mod     > td, tr.status-mod     > th { background-color: #0F2D06 !important; }
+    tr.status-council > td, tr.status-council > th { background-color: #1A3D5D !important; }
+    tr.status-helper  > td, tr.status-helper  > th { background-color: #0A0A33 !important; }
+    tr.status-clique  > td, tr.status-clique  > th { background-color: #031C34 !important; }
+    tr.status-rich    > td, tr.status-rich    > th { background-color: #2B200D !important; }
+    tr.status-criminal> td, tr.status-criminal> th { background-color: #2B021B !important; }
+    tr.status-vip     > td, tr.status-vip     > th { background-color: #2D0A21 !important; }
+    tr.status-user    > td, tr.status-user    > th { background-color: #181818 !important; }
+
+    </style>
+    
+</head>
+
+<body class="bin" style="min-height: 100vh; display: flex; flex-direction: column;">
+<input type="hidden" name="_token" value="YKbw5uM6HVZ3kUK9ibrRaWljcVEhtkMbs5ihhrKJ">
+</nav>
+    <div class="container" style="background-color: #111111; flex: 1; border: 1px #282828;border-style: none solid;padding-bottom: 20px; display: flex; flex-direction: column;">
+        <div style="flex: 1 0 auto; display: flex; flex-direction: column;">
+            <div>
+                <div class="profile-cont" style="position:relative; ">
+
+
+                    <div class="profile-padding" >
+                        
+                        <div class="profile-img">
+                            
+                                <img style="height: 120px; width: 120px;" src="../static/files/default.jpg">
+                            
+                        </div>
+
+
+                        
+                            
+                            <a class="gray" style="font-size: 24px; margin: 0px 20px 0px 2px; padding-top: 0px; display: inline-block; color: #FFFFFF; text-decoration: none; font-weight: bold; background-image: url('../static/files/red.gif');">
+                                <span>Admin</span> <span style="color: #ff0000;">[Admin]</span>
+                            </a>
+                        
+
+                                </div>
+                <div class="info-cont">
+                    
+                     <p style="font-size: 15px; min-height: 87px;">
+
+                    </p>
+                    
+                </div>
+                <hr style="margin: 15px 0;">
+                        </div>
+                <div class="profile-split">
+                    <div class="pastes-section">
+                                            <div class="pastes" style="height: 100%;">
+                            <h5 class="gray" style="font-size: 16px;"><b>Admin's Pastes</b></h5>
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th colspan="3">Title</th>
+                                        <th class="text-center">Comments</th>
+                                        <th class="text-center">Views</th>
+                                        <th class="text-center r-hide">Added</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                        <tr class="doxentry status-admin">
+                                            <td colspan="3" style="overflow: hidden;text-overflow: ellipsis;">
+                                                <a title="Transparency Report" href="../index.html">
+                                                    Transparency Report
+                                                </a>
+                                            </td>
+                                            <td style="width: 105px;" class="text-center">
+                                                0
+                                            </td>
+                                            <td class="text-center">
+                                                6
+                                            </td>
+                                            <td style="width: 120px" class="text-center r-hide">
+                                                2 hours ago
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr class="doxentry status-admin">
+                                            <td colspan="3" style="overflow: hidden;text-overflow: ellipsis;">
+                                                <a title="How to Ensure Your Paste Stays Up" href="../index.html">
+                                                    How to Ensure Your Paste Stays Up
+                                                </a>
+                                            </td>
+                                            <td style="width: 105px;" class="text-center">
+                                                0
+                                            </td>
+                                            <td class="text-center">
+                                                28
+                                            </td>
+                                            <td style="width: 120px" class="text-center r-hide">
+                                                12 hours ago
+                                            </td>
+                                        </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                                        </div>
+
+                    <div class="info-section">
+                        <div class="uinfo">
+                            <h5 class="gray" style="font-size: 16px;"><b>Information</b></h5>
+                            <div class="uinfo-row">
+                                <div class="uinfo-h">User ID</div><div class="uinfo-i">2</div>
+                            </div>
+                            <div class="uinfo-row">
+                                <div class="uinfo-h">Joined</div><div class="uinfo-i">13 hours ago</div>
+                            </div>
+                            <div class="uinfo-row">
+                                <div class="uinfo-h">Pastes</div><div class="uinfo-i">2</div>
+                            </div>
+                            <div class="uinfo-row">
+                                <div class="uinfo-h">Comments</div><div class="uinfo-i">2</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Comments Section -->
+            <div class="profile-comments-section" style="margin-top: auto; padding: 15px; background-color: #181818;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                    <h5 class="gray" style="font-size: 16px; margin: 0;"><b>Profile Comments</b></h5>
+                    
+                </div>
+
+                <!-- Comment Form -->
+                
+
+                <!-- Comments List -->
+                <div class="profile-comments-list hide-scrollbar" style="max-height: 400px; overflow-y: auto;">
+                    
+                        
+                        <div class="profile-comment" style="margin-bottom: 15px; padding: 10px; background-color: #181818; border: 1px solid #282828; border-radius: 3px; overflow: hidden;">
+                            <div style="float: right; text-align: right; margin-left: 15px; flex-shrink: 0;">
+                                <span class="profile-comment-date" style="color: #666; font-size: 12px; display: block;">
+                                    3 hours ago
+                                </span>
+                                <!-- Delete button for profile owner only -->
+                                
+                            </div>
+
+                            <div style="overflow: hidden; color: #bfbfbf; line-height: 1.4; overflow-wrap: break-word; word-wrap: break-word;">
+                                <span class="profile-comment-username">
+                                    
+                                        
+                                        
+                                    
+
+                                    <a href="dead.html" style="color: #FF69B4; font-weight: bold;; text-decoration: none;">
+                                        Dead
+                                    </a>
+                                    
+                                        <span style="color: #87cefa; font-size: 12px;">
+                                            [DarkBin Council]
+                                        </span>
+                                    
+                                </span>
+                                <span>: +rep Dead Owns You</span>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-comment" style="margin-bottom: 15px; padding: 10px; background-color: #181818; border: 1px solid #282828; border-radius: 3px; overflow: hidden;">
+                            <div style="float: right; text-align: right; margin-left: 15px; flex-shrink: 0;">
+                                <span class="profile-comment-date" style="color: #666; font-size: 12px; display: block;">
+                                    3 hours ago
+                                </span>
+                             
+                                
+                            </div>
+
+                            <div style="overflow: hidden; color: #bfbfbf; line-height: 1.4; overflow-wrap: break-word; word-wrap: break-word;">
+                                <span class="profile-comment-username">
+                                    
+                                        
+                                        
+                                    
+
+                                    <a href="CXD.html" style="color: #FFFFFF; font-weight: bold;; text-decoration: none;">
+                                        CXD
+                                    </a>
+                                    
+                                        <span style="color: #87cefa; font-size: 12px;">
+                                            [DarkBin Council]
+                                        </span>
+                                    
+                                </span>
+                                <span>: +rep CXD's my nigga</span>
+                            </div>
+                        </div>
+                        
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var addCommentBtn = document.getElementById('addCommentBtn');
+            if (addCommentBtn) {
+                addCommentBtn.addEventListener('click', function() {
+                    var form = document.getElementById('profile-comment-form');
+                    if (form.style.display === 'none' || form.style.display === '') {
+                        form.style.display = 'block';
+                        addCommentBtn.textContent = 'Cancel';
+                    } else {
+                        form.style.display = 'none';
+                        addCommentBtn.textContent = 'Add Comment';
+                    }
+                });
+            }
+        });
+    </script>
+    </body>
+
+</html>
+
+
+<style>
+@keyframes green-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(0, 255, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 255, 0, 0);
+  }
+}
+.user-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-weight: bold;
+  background-repeat: repeat;
+  background-size: cover;
+  color: #fff;
+}
+.admin-badge {
+  background-image: url('../static/files/red.gif');
+}
+.manager-badge {
+  background-image: url('../static/files/purple.gif');
+}
+.rich-badge {
+  background-image: url('../static/files/gold.gif');
+}
+</style>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                aria-expanded="false" aria-controls="navbar">
+                Please log in from your computer
+            </button>
+            <a style="color: rgb(255, 255, 255);" class="navbar-brand" href="../index.html">
+                DarkBin 
+            </a>
+        </div>
+
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul style="color: white;" class="nav navbar-nav">
+                <li class="">
+                    <a href="../index.html">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="../new.html">
+                        Add Paste
+                    </a>
+                </li>
+                <li>
+                    <a href="../users.html">
+                        Users
+                    </a>
+                </li>
+                <li>
+                    <a href="../upgrades.html">
+                        Upgrades
+                    </a>
+                </li>
+                <li>
+                    <a href="../hoa.html">
+                        Hall of Autism
+                    </a>
+                </li>
+                <li>
+                    <a href="../tos.html">
+                        TOS
+                    </a>
+                </li>
+                <li>
+                    <a href="https://t.me/DarkBin_news">
+                        Telegram
+                    </a>
+                </li>
+                
+            </ul>
+            <div class="sidebar-right">
+                <ul class="nav navbar-nav">
+                    
+                        <li><a href="../login.html">Login</a></li>
+                        <li><a href="../register.html">Register</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+function updateOnlineCount() {
+    fetch('/online_count')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('online-count-number').textContent = data.online_count;
+        });
+}
+
+
+updateOnlineCount();
+
+
+setInterval(updateOnlineCount, 30000);
+</script>
+
+
