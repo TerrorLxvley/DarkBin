@@ -1,24 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-<head>
-    <title>Home - DarkBin</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="static/legacy/index.css" />
-    <link rel="stylesheet" href="static/files/dropdown.html" />
-    <link rel="stylesheet" href="static/files/bootstrap.min.html" />
-    <link rel="stylesheet" href="static/files/doxbin.css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-</head>
-<style>
-body, p {
-    background-color: #060606;
-    color: white;
-    font-family: Arial, sans-serif;
-}
-
+<!DOCTYPE html> <html lang="en"> <meta http-equiv="content-type" content="text/html;charset=utf-8" /> <head> <title>Home - DarkBin</title> <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <link rel="stylesheet" href="static/legacy/index.css" /> <link rel="stylesheet" href="static/files/dropdown.html" /> <link rel="stylesheet" href="static/files/bootstrap.min.html" /> <link rel="stylesheet" href="static/files/doxbin.css" /> <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" /> </head> <style> body, p { background-color: #060606; color: white; font-family: Arial, sans-serif; }
 tr.special-role-row-black td, tr.special-role-row-black th {
     background-color: #080808;
     color: #fff;
@@ -64,187 +44,142 @@ tr.status-user    > td, tr.status-user    > th { background-color: #181818 !impo
     text-decoration: none !important;
 }
 </style>
-<body>
 
-<div class="col-md-12">
-    <div class="col-md-12" style="margin-top: 60px;float:none;">
-        <div align="center">
-            <img src="static/files/logo.png" alt="Logo" />
-            <h5 class="announcement a-1" style="color:#2AABEE;"><u><a style="color:inherit;" href="https://t.me/DarkBin_news">Official DarkBin Telegram</a></u></h5>
-            <h5 class="announcement a-2" style="color:#CC0000;">Main Web: skidslol.vercel.app/</h5>
-        </div>
-    </div>
+<body> <div class="col-md-12"> <div class="col-md-12" style="margin-top: 60px;float:none;"> <div align="center"> <img src="static/files/logo.png" alt="Logo" /> <h5 class="announcement a-1" style="color:#2AABEE;"><u><a style="color:inherit;" href="https://t.me/DarkBin_news">Official DarkBin Telegram</a></u></h5> <h5 class="announcement a-2" style="color:#CC0000;">Main Web: skidslol.vercel.app/</h5> </div> </div>
+CopyRun
+<div class="col-md-7" style="float:none;margin:auto;padding:0;">
+    <h6 style="margin-top: 14px;">Pinned Pastes</h6>
+    <table class="table table-pin table-hover">
+        <thead>
+            <tr style="background-color: #181818;">
+                <th colspan="3">Title</th>
+                <th class="clickable auto-size comments-col" id="commentsorder">Comments</th>
+                <th class="clickable r-hide views-col" id="dateorder">Views</th>
+                <th class="clickable auto-size created-by-col" id="commentsorder">Created by</th>
+                <th class="clickable auto-size added-col" id="viewsorder">Added</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="doxentry status-admin special-role-row-grey">
+                <td colspan="3" style="overflow: hidden;text-overflow: ellipsis;">
+                    <a title="How to Ensure Your Paste Stays Up" href="post/How-to-Ensure-Your-Paste-Stays-Up.html">
+                        How to Ensure Your Paste Stays Up
+                    </a>
+                </td>
+                <td class="r-hide comments-col">0</td>
+                <td class="r-hide views-col">28</td>
+                <td class="created-by-col">
+                    <a class="dox-username" href="user/Admin.html" target="_self" style="color: #FFFFFF; font-weight: bold; background-image: url('static/files/red.gif');">
+                        <span>Admin</span> <span style="color: #ff0000;">[Admin]</span>
+                    </a>
+                </td>
+                <td class="added-col">12 hours ago</td>
+            </tr>
+            <tr class="doxentry status-admin special-role-row-black">
+                <td colspan="3" style="overflow: hidden;text-overflow: ellipsis;">
+                    <a title="Transparency Report" href="post/Transparency-Report.html">
+                        Transparency Report
+                    </a>
+                </td>
+                <td class="r-hide comments-col">0</td>
+                <td class="r-hide views-col">6</td>
+                <td class="created-by-col">
+                    <a class="dox-username" href="user/Admin.html" target="_self" style="color: #FFFFFF; font-weight: bold; background-image: url('static/files/red.gif');">
+                        <span>Admin</span> <span style="color: #ff0000;">[Admin]</span>
+                    </a>
+                </td>
+                <td class="added-col">2 hours ago</td>
+            </tr>
+        </tbody>
+    </table>
 
-    <div class="col-md-7" style="float:none;margin:auto;padding:0;">
-        <h6 style="margin-top: 14px;">Pinned Pastes</h6>
-        <table class="table table-pin table-hover">
-            <thead>
-                <tr style="background-color: #181818;">
-                    <th colspan="3">Title</th>
-                    <th class="clickable auto-size comments-col" id="commentsorder">Comments</th>
-                    <th class="clickable r-hide views-col" id="dateorder">Views</th>
-                    <th class="clickable auto-size created-by-col" id="commentsorder">Created by</th>
-                    <th class="clickable auto-size added-col" id="viewsorder">Added</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="doxentry status-admin special-role-row-grey">
-                    <td colspan="3" style="overflow: hidden;text-overflow: ellipsis;">
-                        <a title="How to Ensure Your Paste Stays Up" href="post/How-to-Ensure-Your-Paste-Stays-Up.html">
-                            How to Ensure Your Paste Stays Up
-                        </a>
-                    </td>
-                    <td class="r-hide comments-col">0</td>
-                    <td class="r-hide views-col">28</td>
-                    <td class="created-by-col">
-                        <a class="dox-username" href="user/Admin.html" target="_self" style="color: #FFFFFF; font-weight: bold; background-image: url('static/files/red.gif');">
-                            <span>Admin</span> <span style="color: #ff0000;">[Admin]</span>
-                        </a>
-                    </td>
-                    <td class="added-col">12 hours ago</td>
-                </tr>
-                <tr class="doxentry status-admin special-role-row-black">
-                    <td colspan="3" style="overflow: hidden;text-overflow: ellipsis;">
-                        <a title="Transparency Report" href="post/Transparency-Report.html">
-                            Transparency Report
-                        </a>
-                    </td>
-                    <td class="r-hide comments-col">0</td>
-                    <td class="r-hide views-col">6</td>
-                    <td class="created-by-col">
-                        <a class="dox-username" href="user/Admin.html" target="_self" style="color: #FFFFFF; font-weight: bold; background-image: url('static/files/red.gif');">
-                            <span>Admin</span> <span style="color: #ff0000;">[Admin]</span>
-                        </a>
-                    </td>
-                    <td class="added-col">2 hours ago</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <table class="table table-striped table-hover" style="margin-top: 0px;">
-            <thead>
-                <tr style="background-color: #181818;">
-                    <th colspan="3">Title</th>
-                    <th class="clickable auto-size comments-col" id="commentsorder">Comments</th>
-                    <th class="clickable r-hide views-col" id="dateorder">Views</th>
-                    <th class="clickable auto-size created-by-col" id="commentsorder">Created by</th>
-                    <th class="clickable auto-size added-col" id="viewsorder">Added</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="doxentry status-council special-role-row-grey">
-                    <td colspan="3" style="overflow: hidden;text-overflow: ellipsis;">
-                        <a title="Ryan Beary" href="post/RyanBeary.html">
-                            Ryan Beary
-                        </a>
-                    </td>
-                    <td class="r-hide comments-col">1</td>
-                    <td class="r-hide views-col">15</td>
-                    <td class="created-by-col">
-                        <a class="dox-username" href="user/ig8.html" target="_self" style="color: #FF69B4; font-weight: bold;">
-                            <span>LKLLC</span> <span style="color: #87cefa;">[2nd Dev]</span>
-                        </a>
-                    </td>
-                    <td class="added-col">3 hours ago</td>
-                </tr>
-                <tr class="doxentry status-mod special-role-row-black">
-                    <td colspan="3" style="overflow: hidden;text-overflow: ellipsis;">
-                        <a title="Pedophile 0x01" href="post/Pedophile.html">
-                            Pedophile 0x01
-                        </a>
-                    </td>
-                    <td class="r-hide comments-col">0</td>
-                    <td class="r-hide views-col">250</td>
-                    <td class="created-by-LKLLC">
-                        <a class="dox-username" href="user/LKLLC.html" target="_self" style="color: #FFFFFF; font-weight: bold;">
-                            <span>CXD</span> <span style="color: #D914FF;">[Council]</span>
-                        </a>
-                    </td>
-                    <td class="added-col">45 minutes ago</td>
-                </tr>
-                <tr class="doxentry status-mod special-role-row-black">
-                    <td colspan="3" style="overflow: hidden;text-overflow: ellipsis;">
-                        <a title="PlugJamie" href="post/PlugJamie.html" style="color: #FF69B4;">
-                            PlugJamie
-                        </a>
-                    </td>
-                    <td class="r-hide comments-col">0</td>
-                    <td class="r-hide views-col">730</td>
-                    <td class="created-by-LKLLC">
-                        <a class="dox-username" href="user/LKLLC.html" target="_self" style="color: #FFFFFF; font-weight: bold;">
-                            <span>LKLLC</span> <span style="color: #D914FF;">[2nd Dev]</span>
-                        </a>
-                    </td>
-                    <td class="added-col">4 minutes ago</td>
-                </tr>
-                <tr class="doxentry status-mod special-role-row-black">
-                    <td colspan="3" style="overflow: hidden;text-overflow: ellipsis;">
-                        <a title="GetDoxxedByLK12" href="post/GetDoxxedByLK12.html" style="color: #FF69B4;">
-                            GetDoxxedByLK12
-                        </a>
-                    </td>
-                    <td class="r-hide comments-col">0</td>
-                    <td class="r-hide views-col">730</td>
-                    <td class="created-by-LKLLC">
-                        <a class="dox-username" href="user/LKLLC.html" target="_self" style="color: #FFFFFF; font-weight: bold;">
-                            <span>LKLLC</span> <span style="color: #D914FF;">[2nd Dev]</span>
-                        </a>
-                    </td>
-                    <td class="added-col">4 minutes ago</td>
-                </tr>
-            </tbody>
-        </table>
-        <!-- Clone of the PlugJamie box, renamed to CARSYNJADE/CINNA -->
-        <div style="margin-top:30px;">
-            <table style="width:100%; border-collapse: collapse; background-color:#181818;">
-                <thead>
-                    <tr>
-                        <th colspan="3" style="padding: 10px; font-size: 16px;">CARSYNJADE/CINNA</th>
-                    </tr>
-                </thead>
-            </table>
-            <table style="width:100%; border-collapse: collapse; background-color:#181818;">
-                <thead>
-                    <tr>
-                        <th style="padding: 8px; font-weight: normal;">Title</th>
-                        <th style="padding: 8px; font-weight: normal;">Comments</th>
-                        <th style="padding: 8px; font-weight: normal;">Views</th>
-                        <th style="padding: 8px; font-weight: normal;">Created by</th>
-                        <th style="padding: 8px; font-weight: normal;">Added</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="status-admin special-role-row-grey">
-                        <td style="overflow: hidden; text-overflow: ellipsis; padding: 8px;">
-                            <a href="post/CarsynjadeCinna1.html" title="Sample Post" style="color:#fff;">Sample Post Title</a>
-                        </td>
-                        <td style="text-align: center;">0</td>
-                        <td style="text-align: center;">0</td>
-                        <td style="text-align: center;">
-                            <a href="user/CarsynjadeCinnaUser.html" style="color:#fff; font-weight:bold;">CARSYNJADE/CINNA</a>
-                        </td>
-                        <td style="text-align: center;">Just now</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
+    <table class="table table-striped table-hover" style="margin-top: 0px;">
+        <thead>
+            <tr style="background-color: #181818;">
+                <th colspan="3">Title</th>
+                <th class="clickable auto-size comments-col" id="commentsorder">Comments</th>
+                <th class="clickable r-hide views-col" id="dateorder">Views</th>
+                <th class="clickable auto-size created-by-col" id="commentsorder">Created by</th>
+                <th class="clickable auto-size added-col" id="viewsorder">Added</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="doxentry status-council special-role-row-grey">
+                <td colspan="3" style="overflow: hidden;text-overflow: ellipsis;">
+                    <a title="Ryan Beary" href="post/RyanBeary.html">
+                        Ryan Beary
+                    </a>
+                </td>
+                <td class="r-hide comments-col">1</td>
+                <td class="r-hide views-col">15</td>
+                <td class="created-by-col">
+                    <a class="dox-username" href="user/ig8.html" target="_self" style="color: #FF69B4; font-weight: bold;">
+                        <span>LKLLC</span> <span style="color: #87cefa;">[2nd Dev]</span>
+                    </a>
+                </td>
+                <td class="added-col">3 hours ago</td>
+            </tr>
+            <tr class="doxentry status-mod special-role-row-black">
+                <td colspan="3" style="overflow: hidden;text-overflow: ellipsis;">
+                    <a title="Pedophile 0x01" href="post/Pedophile.html">
+                        Pedophile 0x01
+                    </a>
+                </td>
+                <td class="r-hide comments-col">0</td>
+                <td class="r-hide views-col">250</td>
+                <td class="created-by-LKLLC">
+                    <a class="dox-username" href="user/LKLLC.html" target="_self" style="color: #FFFFFF; font-weight: bold;">
+                        <span>CXD</span> <span style="color: #D914FF;">[Council]</span>
+                    </a>
+                </td>
+                <td class="added-col">45 minutes ago</td>
+            </tr>
+            <tr class="doxentry status-mod special-role-row-black">
+                <td colspan="3" style="overflow: hidden;text-overflow: ellipsis;">
+                    <a title="PlugJamie" href="post/PlugJamie.html" style="color: #FF69B4;">
+                        PlugJamie
+                    </a>
+                </td>
+                <td class="r-hide comments-col">0</td>
+                <td class="r-hide views-col">730</td>
+                <td class="created-by-LKLLC">
+                    <a class="dox-username" href="user/LKLLC.html" target="_self" style="color: #FFFFFF; font-weight: bold;">
+                        <span>LKLLC</span> <span style="color: #D914FF;">[2nd Dev]</span>
+                    </a>
+                </td>
+                <td class="added-col">4 minutes ago</td>
+            </tr>
+            <tr class="doxentry status-mod special-role-row-black">
+                <td colspan="3" style="overflow: hidden;text-overflow: ellipsis;">
+                    <a title="GetDoxxedByLK12" href="post/GetDoxxedByLK12.html" style="color: #FF69B4;">
+                        GetDoxxedByLK12
+                    </a>
+                </td>
+                <td class="r-hide comments-col">0</td>
+                <td class="r-hide views-col">730</td>
+                <td class="created-by-LKLLC">
+                    <a class="dox-username" href="user/LKLLC.html" target="_self" style="color: #FFFFFF; font-weight: bold;">
+                        <span>LKLLC</span> <span style="color: #D914FF;">[2nd Dev]</span>
+                    </a>
+                </td>
+                <td class="added-col">4 minutes ago</td>
+            </tr>
+            <tr class="doxentry status-mod special-role-row-black">
+                <td colspan="3" style="overflow: hidden;text-overflow: ellipsis;">
+                    <a title="Cinna/Carsynjade" href="post/carsynjade.html" style="color: #FF69B4;">
+                        Cinna/Carsynjade
+                    </a>
+                </td>
+                <td class="r-hide comments-col">0</td>
+                <td class="r-hide views-col">320</td>
+                <td class="created-by-LKLLC">
+                    <a class="dox-username" href="user/LKLLC.html" target="_self" style="color: #FFFFFF; font-weight: bold;">
+                        <span>LKLLC</span> <span style="color: #D914FF;">[2nd Dev]</span>
+                    </a>
+                </td>
+                <td class="added-col">Just now</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
-
-<div class="clickable text-center auto-size">
-    <br />
-    <a href="#">Back to top</a>
-    <br />
-</div>
-
-<script>
-function updateOnlineCount() {
-    fetch('/online_count')
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('online-count-number').textContent = data.online_count;
-        });
-}
-updateOnlineCount();
-setInterval(updateOnlineCount, 30000);
-</script>
+</div> <div class="clickable text-center auto-size"> <br /> <a href="#">Back to top</a> <br /> </div> </body> </html>
