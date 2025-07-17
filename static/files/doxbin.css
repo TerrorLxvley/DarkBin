@@ -39,7 +39,6 @@ div.paste-properties span{
 }
 
 
-/* Paste highlight colours */
 .table-hover>tbody>tr.rich-post{
     background-color: #3e3704;
 }
@@ -65,7 +64,6 @@ table.table tbody tr.hidden-post:hover{
     background-color: #381111 !important;
 }
 
-/* Buttons */
 a.button{
     display: inline-block;
     padding: 5px 8px;
@@ -95,7 +93,6 @@ a.button.button-blue{
     border: solid 1px #0000ff;
 }
 
-/* Show Paste */
 body.bin > .btn{
     line-height: 1.2;
     color: white;
@@ -107,7 +104,6 @@ body.bin > .btn{
     outline: none;
     padding: 5px 5px 3px 5px;
     vertical-align: top;
-    /* margin-top: 8px; */
 }
 body.bin .admin-options li a{
     background-color: #753b3b;
