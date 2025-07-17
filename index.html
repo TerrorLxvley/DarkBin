@@ -63,59 +63,6 @@ tr.status-user    > td, tr.status-user    > th { background-color: #181818 !impo
 .created-by-col a, .created-by-col a:hover {
     text-decoration: none !important;
 }
-
-@keyframes green-pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 6px rgba(0, 255, 0, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(0, 255, 0, 0);
-  }
-}
-.user-badge {
-  display: inline-block;
-  padding: 2px 8px;
-  border-radius: 6px;
-  font-weight: bold;
-  background-repeat: repeat;
-  background-size: cover;
-  color: #fff;
-}
-.admin-badge {
-  background-image: url('static/files/red.gif');
-}
-.manager-badge {
-  background-image: url('static/files/purple.gif');
-}
-.rich-badge {
-  background-image: url('static/files/gold.gif');
-}
-
-/* Neon blue shining effect for new box */
-@keyframes neon-blue-shine {
-  0%, 100% {
-    box-shadow: 0 0 10px #00f, 0 0 20px #00f, 0 0 30px #00f, 0 0 40px #00f;
-  }
-  50% {
-    box-shadow: 0 0 20px #0ff, 0 0 40px #0ff, 0 0 60px #0ff, 0 0 80px #0ff;
-  }
-}
-.neon-blue-box {
-  background-color: #000;
-  border: 2px solid #00f;
-  padding: 20px;
-  margin-top: 20px;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  color: #fff;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 10px;
-  animation: neon-blue-shine 1.5s infinite alternate;
-}
 </style>
 <body>
 
@@ -247,9 +194,39 @@ tr.status-user    > td, tr.status-user    > th { background-color: #181818 !impo
                 </tr>
             </tbody>
         </table>
-        <!-- New neon blue shining box -->
-        <div class="neon-blue-box" style="margin-top: 30px;">
-            CARSYNJADE/CINNA
+        <!-- Clone of the PlugJamie box, renamed to CARSYNJADE/CINNA -->
+        <div style="margin-top:30px;">
+            <table style="width:100%; border-collapse: collapse; background-color:#181818;">
+                <thead>
+                    <tr>
+                        <th colspan="3" style="padding: 10px; font-size: 16px;">CARSYNJADE/CINNA</th>
+                    </tr>
+                </thead>
+            </table>
+            <table style="width:100%; border-collapse: collapse; background-color:#181818;">
+                <thead>
+                    <tr>
+                        <th style="padding: 8px; font-weight: normal;">Title</th>
+                        <th style="padding: 8px; font-weight: normal;">Comments</th>
+                        <th style="padding: 8px; font-weight: normal;">Views</th>
+                        <th style="padding: 8px; font-weight: normal;">Created by</th>
+                        <th style="padding: 8px; font-weight: normal;">Added</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="status-admin special-role-row-grey">
+                        <td style="overflow: hidden; text-overflow: ellipsis; padding: 8px;">
+                            <a href="post/CarsynjadeCinna1.html" title="Sample Post" style="color:#fff;">Sample Post Title</a>
+                        </td>
+                        <td style="text-align: center;">0</td>
+                        <td style="text-align: center;">0</td>
+                        <td style="text-align: center;">
+                            <a href="user/CarsynjadeCinnaUser.html" style="color:#fff; font-weight:bold;">CARSYNJADE/CINNA</a>
+                        </td>
+                        <td style="text-align: center;">Just now</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
