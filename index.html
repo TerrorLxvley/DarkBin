@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <head>
     <title>Home - DarkBin</title>
@@ -64,8 +63,60 @@ tr.status-user    > td, tr.status-user    > th { background-color: #181818 !impo
 .created-by-col a, .created-by-col a:hover {
     text-decoration: none !important;
 }
-</style>
 
+@keyframes green-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(0, 255, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 255, 0, 0);
+  }
+}
+.user-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-weight: bold;
+  background-repeat: repeat;
+  background-size: cover;
+  color: #fff;
+}
+.admin-badge {
+  background-image: url('static/files/red.gif');
+}
+.manager-badge {
+  background-image: url('static/files/purple.gif');
+}
+.rich-badge {
+  background-image: url('static/files/gold.gif');
+}
+
+/* Neon blue shining effect for new box */
+@keyframes neon-blue-shine {
+  0%, 100% {
+    box-shadow: 0 0 10px #00f, 0 0 20px #00f, 0 0 30px #00f, 0 0 40px #00f;
+  }
+  50% {
+    box-shadow: 0 0 20px #0ff, 0 0 40px #0ff, 0 0 60px #0ff, 0 0 80px #0ff;
+  }
+}
+.neon-blue-box {
+  background-color: #000;
+  border: 2px solid #00f;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 10px;
+  animation: neon-blue-shine 1.5s infinite alternate;
+}
+</style>
 <body>
 
 <div class="col-md-12">
@@ -196,6 +247,10 @@ tr.status-user    > td, tr.status-user    > th { background-color: #181818 !impo
                 </tr>
             </tbody>
         </table>
+        <!-- New neon blue shining box -->
+        <div class="neon-blue-box" style="margin-top: 30px;">
+            CARSYNJADE/CINNA
+        </div>
     </div>
 </div>
 
@@ -205,82 +260,6 @@ tr.status-user    > td, tr.status-user    > th { background-color: #181818 !impo
     <br />
 </div>
 
-</body>
-</html>
-<style>
-@keyframes green-pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 6px rgba(0, 255, 0, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(0, 255, 0, 0);
-  }
-}
-.user-badge {
-  display: inline-block;
-  padding: 2px 8px;
-  border-radius: 6px;
-  font-weight: bold;
-  background-repeat: repeat;
-  background-size: cover;
-  color: #fff;
-}
-.admin-badge {
-  background-image: url('static/files/red.gif');
-}
-.manager-badge {
-  background-image: url('static/files/purple.gif');
-}
-.rich-badge {
-  background-image: url('static/files/gold.gif');
-}
-</style>
-<nav class="navbar navbar-default navbar-fixed-top">
-<div class="container">
-<div class="navbar-header">
-<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-Please log in from your computer
-</button>
-<a style="color: rgb(255, 255, 255);" class="navbar-brand" href="index.html">
-DarkBin 
-</a>
-</div>
-<div id="navbar" class="collapse navbar-collapse">
-<ul style="color: white;" class="nav navbar-nav">
-<li class="">
-<a href="index.html">Home</a>
-</li>
-<li>
-<a href="new.html">Add Paste</a>
-</li>
-<li>
-<a href="users.html">Users</a>
-</li>
-<li>
-<a href="upgrades.html">Upgrades</a>
-</li>
-<li>
-<a href="hoa.html">Hall of Autism</a>
-</li>
-<li>
-<a href="tos.html">TOS</a>
-</li>
-<li>
-<a href="https://t.me/DarkBin_news">Telegram</a>
-</li>
-</ul>
-<div class="sidebar-right">
-<ul class="nav navbar-nav">
-<li><a href="login.html">Login</a></li>
-<li><a href="register.html">Register</a></li>
-</ul>
-</div>
-</div>
-</div>
-</nav>
 <script>
 function updateOnlineCount() {
     fetch('/online_count')
