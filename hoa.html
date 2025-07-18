@@ -1,19 +1,16 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
-
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hall Of Autism - DarkBin</title>
-    <link rel="stylesheet" href="static/legacy/index.css">
-    <link rel="stylesheet" href="static/files/dropdown.html">
-    <link rel="stylesheet" href="static/files/bootstrap.min.html">
-    <link rel="stylesheet" href="static/files/doxbin.css">
+    <link rel="stylesheet" href="static/legacy/index.css" />
+    <link rel="stylesheet" href="static/files/dropdown.html" />
+    <link rel="stylesheet" href="static/files/bootstrap.min.html" />
+    <link rel="stylesheet" href="static/files/doxbin.css" />
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
     <style>
         html {
@@ -304,7 +301,6 @@
             }
         }
     </style>
-
     <script>
         (function() {
             const sparkleChars = ['✦', '✧', '✯', '✬', '✫', '*'];
@@ -318,18 +314,13 @@
             function createSparkle() {
                 const sparkle = document.createElement('div');
                 sparkle.className = 'sparkle';
-                
-               
                 const offsetX = (Math.random() - 0.5) * 20;
                 const offsetY = (Math.random() - 0.5) * 20;
-                
                 sparkle.style.left = (mouseX + offsetX) + 'px';
                 sparkle.style.top = (mouseY + offsetY) + 'px';
                 sparkle.style.color = colors[Math.floor(Math.random() * colors.length)];
                 sparkle.textContent = sparkleChars[Math.floor(Math.random() * sparkleChars.length)];
-                
                 document.body.appendChild(sparkle);
-                
                 setTimeout(() => {
                     sparkle.remove();
                 }, 800);
@@ -338,18 +329,13 @@
             function updateMousePosition(e) {
                 mouseX = e.clientX;
                 mouseY = e.clientY;
-                
                 if (!isMoving) {
                     isMoving = true;
                     sparkleInterval = setInterval(createSparkle, 50);
                 }
-                
-  
                 if (movementTimeout) {
                     clearTimeout(movementTimeout);
                 }
-                
-            
                 movementTimeout = setTimeout(() => {
                     isMoving = false;
                     if (sparkleInterval) {
@@ -373,7 +359,6 @@
 
             document.addEventListener('mousemove', updateMousePosition);
             document.addEventListener('mouseleave', stopSparkles);
-
             window.addEventListener('beforeunload', () => {
                 document.removeEventListener('mousemove', updateMousePosition);
                 document.removeEventListener('mouseleave', stopSparkles);
@@ -384,7 +369,6 @@
         (function () {
             const hoaAudio = document.getElementById('hoa-audio');
             hoaAudio.volume = 0.5;
-
             function catchHandler() {
                 let inputListener;
                 inputListener = function () {
@@ -392,11 +376,9 @@
                     document.removeEventListener('mousedown', inputListener);
                     document.removeEventListener('keydown', inputListener);
                 };
-
                 document.addEventListener('mousedown', inputListener);
                 document.addEventListener('keydown', inputListener);
             }
-
             if (hoaAudio.readyState > 1) {
                 hoaAudio.play().catch(catchHandler);
             } else {
@@ -406,12 +388,8 @@
             }
         })();
     </script>
-
 </head>
-
 <body>
-    
-
 <style>
 @keyframes green-pulse {
   0% {
@@ -443,10 +421,8 @@
   background-image: url('static/files/gold.gif');
 }
 </style>
-
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
-
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
                 aria-expanded="false" aria-controls="navbar">
@@ -456,58 +432,25 @@
                 DarkBin 
             </a>
         </div>
-
         <div id="navbar" class="collapse navbar-collapse">
             <ul style="color: white;" class="nav navbar-nav">
-                <li class="">
-                    <a href="index.html">
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a href="new.html">
-                        Add Paste
-                    </a>
-                </li>
-                <li>
-                    <a href="users.html">
-                        Users
-                    </a>
-                </li>
-                <li>
-                    <a href="upgrades.html">
-                        Upgrades
-                    </a>
-                </li>
-                <li>
-                    <a href="hoa.html">
-                        Hall of Autism
-                    </a>
-                </li>
-                <li>
-                    <a href="tos.html">
-                        TOS
-                    </a>
-                </li>
-                <li>
-                    <a href="https://t.me/DarkBin_news">
-                        Telegram
-                    </a>
-                </li>
-                
+                <li class=""><a href="index.html">Home</a></li>
+                <li><a href="new.html">Add Paste</a></li>
+                <li><a href="users.html">Users</a></li>
+                <li><a href="upgrades.html.html">Upgrades</a></li>
+                <li><a href="hoa.html">Hall of Autism</a></li>
+                <li><a href="tos.html">TOS</a></li>
+                <li><a href="https://t.me/DarkBin_news">Telegram</a></li>
             </ul>
             <div class="sidebar-right">
                 <ul class="nav navbar-nav">
-                    
-                        <li><a href="login.html">Login</a></li>
-                        <li><a href="register.html">Register</a></li>
-                    
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
                 </ul>
             </div>
         </div>
     </div>
 </nav>
-
 <script>
 function updateOnlineCount() {
     fetch('/online_count')
@@ -516,86 +459,70 @@ function updateOnlineCount() {
             document.getElementById('online-count-number').textContent = data.online_count;
         });
 }
-
-
 updateOnlineCount();
-
 setInterval(updateOnlineCount, 30000);
 </script>
-
-
-    <div class="col-md-12" style="margin-top: 60px;">
-        <div class="center">
-            <h4 class="hoa-title rainbow"><b>HALL OF AUTISM</b></h4>
-        </div>
-        <div class="container" style="margin-top:20px;">
-
-            <div class="hoa-container">
-                <div class="hoa-image">
-                    <img src="static/files/PlugJamie.png">
-                </div>
-                <div class="hoa-name rainbow">
-                    <b>Plug Jamie</b>
-                </div>
-                <div class="hoa-description">
-                    <b>James Gilgi</b><br>
-                    James Gilgi, alias:
-                    PlugJamie, LARP, has been
-                    known for his " breaching ",
-                    "hacking" and agebaiting.
-                    what a retard.
-                    <br>
-                    <a href="post/PlugJamie.html">Dox</a>
-                    <br>
-                </div>
+<div class="col-md-12" style="margin-top: 60px;">
+    <div class="center">
+        <h4 class="hoa-title rainbow"><b>HALL OF AUTISM</b></h4>
+    </div>
+    <div class="container" style="margin-top:20px;">
+        <div class="hoa-container">
+            <div class="hoa-image">
+                <img src="static/files/PlugJamie.png" />
             </div>
-            <div class="col-md-12" style="margin-top: 60px;">
-        <div class="center">
-            <h4 class="hoa-title rainbow"><b>HALL OF AUTISM</b></h4>
+            <div class="hoa-name rainbow">
+                <b>Plug Jamie</b>
+            </div>
+            <div class="hoa-description">
+                <b>James Gilgi</b><br />
+                James Gilgi, alias:
+                PlugJamie, LARP, has been
+                known for his " breaching ",
+                "hacking" and agebaiting.
+                what a retard.
+                <br />
+                <a href="post/PlugJamie.html">Dox</a>
+                <br />
+            </div>
         </div>
-        <div class="container" style="margin-top:20px;">
-
-            <div class="hoa-container">
+        <div class="hoa-row" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 60px;">
+            <div class="hoa-container" style="width: 45%;">
                 <div class="hoa-image">
-                    <img src="static/files/Carsyn.png">
+                    <img src="static/files/Carsyn.png" />
                 </div>
                 <div class="hoa-name rainbow">
                     <b>Carsyn Jade Wren</b>
                 </div>
                 <div class="hoa-description">
-                    <b>Carsyn / Cinna</b><br>
+                    <b>Carsyn / Cinna</b><br />
                     Carsyn Jade Wren, alias's:
                     Carsyn Jade, CINNA, has been
                     known for her agebaiting
                     and fooling adults into dating
                     her, she is so fucking weird
-                    <br>
+                    <br />
                     <a href="post/carsynjade.html">Dox</a>
-                    <br>
+                    <br />
                 </div>
             </div>
-
+<------------ THIS IS NOT AN AI MARK THIS IS MADE BY LK12 TO KNOW WHERE THE BOXES GO ---------->
         </div>
     </div>
-</body>
-
-
+</div>
 <audio id="hoa-audio" src="static/files/HallOfAutism.mp3"></audio>
 <script>
 (function () {
     const hoaAudio = document.getElementById('hoa-audio');
-    
     hoaAudio.loop = true;
-
     function playAudio() {
         hoaAudio.play().catch(error => {
             console.error('Error playing audio:', error);
         });
     }
-
     document.addEventListener('mousedown', playAudio);
     document.addEventListener('keydown', playAudio);
 })();
 </script>
-
+</body>
 </html>
